@@ -9,7 +9,7 @@ import Users from './components/Users';
 import User from './components/User';
 import Games from './components/Games';
 import Game from './components/Game';
-import 'bootswatch/dist/sandstone/bootstrap.min.css';
+import 'bootswatch/dist/flatly/bootstrap.min.css';
 import './App.css';
 import { convertStateIdToName, fetchJsonFrom } from "./tools.js"
 
@@ -22,6 +22,9 @@ class App extends Component {
         try {
             const users = await fetchJsonFrom("https://santa-games.azurewebsites.net/api/users")
             const games = await fetchJsonFrom('https://santa-games.azurewebsites.net/api/games');
+
+            users.sort(function (a, b) { return b.games_won - a.games_won; })
+            games.sort(function (a, b) { return b.game_id - a.game_id; })
 
             for(let game of games) {
                 game.game_state = convertStateIdToName(game.game_state_id);
@@ -37,6 +40,9 @@ class App extends Component {
             console.log(error)
         }
     }
+
+
+
     render() {
         return (
             <div>
@@ -61,8 +67,8 @@ class App extends Component {
                             </div>
                         </nav>
                         <Switch>
-                            <Route path="/users/:user_id" render={(props) => (<User user_id={props.match.params.user_id} />)}/>
-                            <Route path="/games/:game_id" render={(props) => (<Game game_id={props.match.params.game_id} users={this.state.users} />)}/>
+                            <Route path="/users/:user_id" render={(props) => (<User user_id={parseInt(props.match.params.user_id)} />)}/>
+                            <Route path="/games/:game_id" render={(props) => (<Game game_id={parseInt(props.match.params.game_id)} />)}/>
                             <Route path="/games"><Games games={this.state.games} /></Route>
                             <Route path="/"><Users users={this.state.users} /></Route>
                         </Switch>

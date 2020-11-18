@@ -18,6 +18,7 @@ class Users extends Component {
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
+                            <th scope="col">Won</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -25,6 +26,7 @@ class Users extends Component {
                             <tr key={user.user_id} onClick={() => this.handleClick(user.user_id)}>
                                 <td>{user.user_id}</td>
                                 <td>{user.user_name}</td>
+                                <td>{user.games_won}</td>
                             </tr>
                         ))}
                     </tbody>
