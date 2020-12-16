@@ -64,7 +64,7 @@ class TicTacToe extends Component {
 
             svgElements.push((<line key={key++} x1={scx} x2={ecx} y1={scy} y2={ecy} stroke="red" strokeWidth="3"/>))
         } 
-        return (<svg class="border rounded" width={3*w} height={3*h}>{svgElements}</svg>)
+        return (<svg className="border rounded" width={3*w} height={3*h}>{svgElements}</svg>)
     }
 }
 

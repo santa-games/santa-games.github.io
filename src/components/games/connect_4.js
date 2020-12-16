@@ -70,7 +70,7 @@ class Connect4 extends Component {
 
         //     svgElements.push((<line key={key++} x1={scx} x2={ecx} y1={scy} y2={ecy} stroke="red" strokeWidth="3"/>))
         // } 
-        return (<svg class="border rounded" width={cols*w} height={rows*h}>{svgElements}</svg>)
+        return (<svg className="border rounded" width={cols*w} height={rows*h}>{svgElements}</svg>)
     }
 }
 

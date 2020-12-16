@@ -49,6 +49,7 @@ class App extends Component {
                 <Router>
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <img src="/icon.svg" alt="Santa" style={{height: "40px", margin: "100 10 1000 10"}}></img>
                             <a className="navbar-brand" href="/">Santa-Games</a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarNav"
@@ -58,7 +59,7 @@ class App extends Component {
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav mr-auto">
                                     <li className="nav-item">
-                                        <Link class="nav-link" to="/">Leaderboard</Link>
+                                        <Link className="nav-link" to="/">Leaderboard</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/games">Games</Link>

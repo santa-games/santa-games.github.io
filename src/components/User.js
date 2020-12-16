@@ -30,14 +30,14 @@ class User extends Component {
                 <div className="container">
                     <h3>{this.state.user.user_name}</h3>
                     <h5>Details</h5>
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <tbody>
                             <tr><td>User ID</td><td>{this.state.user.user_id}</td></tr>
                             <tr><td>User Name</td><td>{this.state.user.user_name}</td></tr>
                         </tbody>
                     </table>
                     <h5>Stats</h5>
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <tbody>
                             <tr><td>Games Played</td><td>{this.state.user.games_lost + this.state.user.games_won}</td></tr>
                             <tr><td>Games Won</td><td>{this.state.user.games_won}</td></tr>

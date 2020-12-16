@@ -11,9 +11,9 @@ class Users extends Component {
     render() {
         if (this.state.redirect !== undefined) return <Redirect to={'/users/' + this.state.redirect} />
         return (
-            <div class="container">
+            <div className="container">
                 <h3>Leaderboard</h3>
-                <table class="table table-hover">
+                <table className="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>

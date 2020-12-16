@@ -12,8 +12,7 @@ class Games extends Component {
         if (this.state.redirect !== undefined) return <Redirect to={'/games/' + this.state.redirect} />
 
         let tableContents;
-        if (this.props.games === undefined) tableContents = (<p>No games to display</p>)
-        else {
+        if (this.props.games !== undefined) {
             tableContents = this.props.games.map((game) => (
                 <tr key={game.game_id} onClick={() => this.handleClick(game.game_id)}>
                     <td>{game.game_id}</td>
@@ -26,9 +25,9 @@ class Games extends Component {
             ))
         }
         return (
-            <div class="container">
+            <div className="container">
                 <h3>Games</h3>
-                <table class="table table-hover">
+                <table className="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>

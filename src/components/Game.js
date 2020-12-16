@@ -37,7 +37,7 @@ class Game extends Component {
                 <div className="container">
                     <h3>Game #{this.state.game.game_id} | Tic-Tac-Toe | {this.state.game.host_user_name} vs {this.state.game.guest_user_name === null ? "[TBD]" : this.state.game.guest_user_name}</h3>
                     <h5>Stats</h5>
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <tbody>
                             <tr>
                                 <td>Status</td>
@@ -51,7 +51,7 @@ class Game extends Component {
                     </table>
 
                     <h5>Details</h5>
-                    <table class="table table-sm">
+                    <table className="table table-sm">
                         <tbody>
                             <tr>
                                 <td>Player 1</td>
